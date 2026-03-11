@@ -18,10 +18,6 @@ def create_app(config_overrides=None):
    with app.app_context(): 
       db.create_all() 
       db.session.commit() 
-
-   @app.route("/health")
-   def health():
-       return jsonify({"status": "ok"}), 200
    
    # Register the blueprints 
    from todo.views.routes import api 
