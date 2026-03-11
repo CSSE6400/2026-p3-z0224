@@ -7,7 +7,7 @@ services:
       POSTGRES_USER: administrator 
       POSTGRES_DB: todo 
     volumes: 
-      - ./data:/var/lib/postgresql 
+      - ./data:/var/lib/postgresql/data 
    app: 
     build: . 
     restart: always 
