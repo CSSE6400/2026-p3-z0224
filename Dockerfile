@@ -18,4 +18,5 @@ RUN pipx run poetry install --no-root
 COPY todo todo
 
 # Adding a delay to our application startup 
+
 CMD ["pipx", "run", "poetry", "run", "flask", "--app", "todo", "run", "--host=0.0.0.0", "--port=6400"]
